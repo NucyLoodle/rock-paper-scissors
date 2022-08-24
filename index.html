@@ -25,6 +25,14 @@ function playRound(playerSelection,computerSelection) {
       return "Congratulations, you won!";
     }
   }
+  if (playerSelection === 'paper') {
+    if (computerSelection === 'scissors') {
+      return "Sorry, the computer has won!";
+    } else {
+      return "Congratulations, you won!";
+    }
+  }
+
 }
 
 const playerSelection = "rock";
