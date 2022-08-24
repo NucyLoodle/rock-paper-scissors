@@ -9,7 +9,7 @@
 
 function getComputerChoice() {
     const options = ['rock', 'paper', 'scissors'];
-    const choice = Math.round(Math.random()*options.length -1);
+    const choice = Math.floor(Math.random()*options.length);
     return options[choice];   
 }
 console.log(getComputerChoice())
