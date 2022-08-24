@@ -8,17 +8,24 @@
   <script>
 
 function getComputerChoice() {
-    const options = ['Rock', 'Paper', 'Scissors'];
+    const options = ['rock', 'paper', 'scissors'];
     const choice = Math.round(Math.random()*options.length -1);
     return options[choice];   
 }
 console.log(getComputerChoice())
 
 function playRound(playerSelection,computerSelection) {
-    if (playerSelection === computerSelection) 
-        return "The result is a tie!"
-    } 
-
+    if (playerSelection === computerSelection) {
+    return 'This game is a tie!';
+  }
+    if (playerSelection === 'rock') {
+    if (computerSelection === 'paper') {
+      return "Sorry, the computer has won!";
+    } else {
+      return "Congratulations, you won!";
+    }
+  }
+}
 
 
 
