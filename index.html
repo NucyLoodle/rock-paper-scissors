@@ -12,7 +12,10 @@ function getComputerChoice() {
     const choice = Math.floor(Math.random()*options.length);
     return options[choice];   
 }
-console.log("The computer chose:" + getComputerChoice())
+console.log("The computerchoice chose:" + getComputerChoice())
+const computerSelection = getComputerChoice();
+console.log("The computerselection chose" + computerSelection);
+
 
 function playRound(playerSelection,computerSelection) {
     if (playerSelection === computerSelection) {
@@ -47,8 +50,9 @@ function playRound(playerSelection,computerSelection) {
 }
 
 const playerSelection = "scissors";
-const computerSelection = getComputerChoice();
+
 console.log("The player chose" + playerSelection);
+
 console.log(playRound(playerSelection, computerSelection));
 
 
