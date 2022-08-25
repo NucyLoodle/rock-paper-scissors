@@ -74,12 +74,12 @@ const playGame = () => {
     results.push(playRound(playerSelection, computerSelection))
     
   }
-  console.log(results)
+
  
   let userWinner = results.filter(element => element === "Congratulations, you won!")
   let computerWinner = results.filter(element => element === "You lose! Rock beats Scissors" || element === "You lose! Scissors beats Paper" || element === "You lose! Paper beats Rock")
   
-  console.log(computerWinner)
+  
 
   if (userWinner.length > computerWinner.length) {
     return console.log("Congratulations, you are the winner!")
