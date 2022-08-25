@@ -62,11 +62,15 @@ const getPlayerChoice = playerInput => {
 
 
 const playGame = () => {
+  for (let i = 0; i < 5; i++){
+
+  
     
     let playerSelection = getPlayerChoice();
     const computerSelection = getComputerChoice();
     console.log("The computer has chosen: " + computerSelection);
     console.log(playRound(playerSelection, computerSelection));
+  }
 }
 playGame()
 
