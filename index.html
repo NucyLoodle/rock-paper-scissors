@@ -15,6 +15,7 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection,computerSelection) {
+  
     if (playerSelection === computerSelection) {
     return 'This game is a tie!';
   }
@@ -44,8 +45,8 @@ function playRound(playerSelection,computerSelection) {
         }
   }
 
-  else {
-    console.log('Error! You must choose rock, paper or scissors!')
+  else if (playerSelection !== 'paper' || 'rock' || 'scissors'){
+      return console.log('Error! You must choose rock, paper or scissors!')
   }
 
 }
