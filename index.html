@@ -76,8 +76,10 @@ const playGame = () => {
   }
   console.log(results)
  
-  let winner = results.filter(element => element === "Congratulations, you won!")
-  console.log(winner)
+  let userWinner = results.filter(element => element === "Congratulations, you won!")
+  let computerWinner = results.filter(element => element === "You lose! Rock beats Scissors" || element === "You lose! Scissors beats Paper" || element === "You lose! Paper beats Rock")
+  
+  console.log(computerWinner)
 
 }
 playGame()
