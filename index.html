@@ -81,6 +81,16 @@ const playGame = () => {
   
   console.log(computerWinner)
 
+  if (userWinner.length > computerWinner.length) {
+    return console.log("Congratulations, you are the winner!")
+  } else if (computerWinner.length > userWinner.length) {
+    return console.log ("Sorry, the computer wins this time.")
+  } else if (userWinner.length = computerWinner.length) {
+    return console.log("The game is a tie")
+  } else{ 
+    console.log("There is no winner this time.")
+  }
+
 }
 playGame()
 
