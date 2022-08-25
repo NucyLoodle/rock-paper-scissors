@@ -45,10 +45,21 @@ function playRound(playerSelection,computerSelection) {
   }
 
 }
+const getPlayerChoice = playerInput => {
+  playerInput = prompt("Please enter your choice.")
+  playerInput = playerInput.toLowerCase();
+  if (playerInput === 'rock' || playerInput === 'paper' || playerInput === 'scissors'){
+    return playerInput;
+  } else {
+    console.log('Error! You must choose rock, paper or scissors!');
+  }
+}
+
 
 
 const playGame = () => {
-    const playerSelection = 'scissors';
+    
+    let playerSelection = getPlayerChoice();
     const computerSelection = getComputerChoice();
     console.log(computerSelection);
     console.log(playRound(playerSelection, computerSelection));
