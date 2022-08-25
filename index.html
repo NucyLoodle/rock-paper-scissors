@@ -72,10 +72,11 @@ const playGame = () => {
     console.log("The computer has chosen: " + computerSelection);
     console.log(playRound(playerSelection, computerSelection));
     results.push(playRound(playerSelection, computerSelection))
+    
   }
-  
   console.log(results)
-  winner = results.filter(element => element = "Congratulations, you won!")
+ 
+  let winner = results.filter(element => element === "Congratulations, you won!")
   console.log(winner)
 
 }
