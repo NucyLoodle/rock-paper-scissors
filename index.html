@@ -64,7 +64,7 @@ const getPlayerChoice = playerInput => {
 
 const playGame = () => {
   let results = [];
-  for (let i = 0; i < 5; i++){
+  //for (let i = 0; i < 5; i++){
 
   
     
@@ -74,7 +74,7 @@ const playGame = () => {
     console.log(playRound(playerSelection, computerSelection));
     results.push(playRound(playerSelection, computerSelection))
     
-  }
+  //}
 
  
   let userWinner = results.filter(element => element === "Congratulations, you won!")
