@@ -5,7 +5,12 @@
   <title>Rock, Paper, Scissors Game</title>
 </head>
 <body>
+  <button id = "rockbtn">Rock</button>
   <script>
+
+
+
+
 
 function getComputerChoice() {
     const options = ['rock', 'paper', 'scissors'];
@@ -51,14 +56,19 @@ function playRound(playerSelection,computerSelection) {
 
 }
 const getPlayerChoice = playerInput => {
-  playerInput = prompt("Please enter your choice.")
-  playerInput = playerInput.toLowerCase();
+  //playerInput = prompt("Please enter your choice.")
+  //playerInput = playerInput.toLowerCase();
+
+  
+
+
   if (playerInput === 'rock' || playerInput === 'paper' || playerInput === 'scissors'){
     return playerInput;
   } else {
     console.log('Error! You must choose rock, paper or scissors!');
   }
 }
+
 
 
 
@@ -92,7 +102,15 @@ const playGame = () => {
     console.log("There is no winner this time.")
   }
 
+  const btn = document.querySelector('#rockbtn');
+    btn.addEventListener('click', () => {
+     playRound(playerSelection === 'rock');
+    })
+
 }
+
+
+
 playGame()
 
 
