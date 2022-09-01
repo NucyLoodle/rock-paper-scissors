@@ -22,6 +22,8 @@ const scissorsButton = document.querySelector('.paper')
 
 
 
+
+
 function getComputerChoice() {
     const options = ['rock', 'paper', 'scissors'];
     const choice = Math.floor(Math.random()*options.length);
@@ -30,12 +32,9 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection,computerSelection) {
-  
-    if (playerSelection === computerSelection) {
+  if (playerSelection === computerSelection) {
     return 'This game is a tie!';
   }
-
-
     if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
             return "You lose! Paper beats Rock";
@@ -43,7 +42,6 @@ function playRound(playerSelection,computerSelection) {
             return "Congratulations, you won!";
         }
   }
-
     if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
             return "You lose! Scissors beats Paper";
@@ -51,7 +49,6 @@ function playRound(playerSelection,computerSelection) {
             return "Congratulations, you won!";
         }
   }
-
   if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
             return "You lose! Rock beats Scissors";
@@ -59,25 +56,23 @@ function playRound(playerSelection,computerSelection) {
             return "Congratulations, you won!";
         }
   }
-
   else if (playerSelection !== 'paper' || 'rock' || 'scissors'){
       return; 
   }
 
 }
-const getPlayerChoice = playerInput => {
+
+
+
+/*const getPlayerChoice = playerInput => {
   playerInput = prompt("Please enter your choice.")
   playerInput = playerInput.toLowerCase();
-
-  
-
-
   if (playerInput === 'rock' || playerInput === 'paper' || playerInput === 'scissors'){
     return playerInput;
   } else {
     console.log('Error! You must choose rock, paper or scissors!');
   }
-}
+}*/
 
 
 
