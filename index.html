@@ -65,6 +65,8 @@ results.classList.add('results');
 rockButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'rock';
+  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection))
+
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
 })
