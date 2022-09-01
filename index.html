@@ -15,13 +15,8 @@
   <script>
 
 const rockButton = document.querySelector('.rock')
-const paperButton = document.querySelector('.scissors')
-const scissorsButton = document.querySelector('.paper')
-
-
-
-
-
+const paperButton = document.querySelector('.paper')
+const scissorsButton = document.querySelector('.scissors')
 
 
 function getComputerChoice() {
@@ -68,6 +63,7 @@ rockButton.addEventListener('click', () => {
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
 })
+
 
 
 /*const getPlayerChoice = playerInput => {
