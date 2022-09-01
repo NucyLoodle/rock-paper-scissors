@@ -64,7 +64,19 @@ rockButton.addEventListener('click', () => {
   console.log(playRound(playerSelection, computerSelection));
 })
 
+paperButton.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  const playerSelection = 'paper';
+  console.log("The computer has chosen: " + computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
+})
 
+scissorsButton.addEventListener('click', () => {
+  const computerSelection = getComputerChoice();
+  const playerSelection = 'scissors';
+  console.log("The computer has chosen: " + computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
+})
 
 /*const getPlayerChoice = playerInput => {
   playerInput = prompt("Please enter your choice.")
