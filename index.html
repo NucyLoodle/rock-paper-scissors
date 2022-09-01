@@ -5,9 +5,27 @@
   <title>Rock, Paper, Scissors Game</title>
 </head>
 <body>
-  <button id = "rockbtn">Rock</button>
+  <button id = "rock">Rock</button>
   <script>
 
+
+
+
+const getPlayerChoice = playerInput => {
+  const rockButton = document.querySelector('#rock');
+  rock.addEventListener('click', () => {
+  console.log("You have chosen rock.")
+  });
+ 
+/*  playerInput = prompt("Please enter your choice.")
+  //playerInput = playerInput.toLowerCase();//
+
+  if (playerInput === 'rock' || playerInput === 'paper' || playerInput === 'scissors'){
+    return playerInput;
+  } else {
+    console.log('Error! You must choose rock, paper or scissors!');
+  } */
+}
 
 
 
@@ -55,19 +73,6 @@ function playRound(playerSelection,computerSelection) {
   }
 
 }
-const getPlayerChoice = playerInput => {
-  //playerInput = prompt("Please enter your choice.")
-  //playerInput = playerInput.toLowerCase();
-
-  
-
-
-  /*if (playerInput === 'rock' || playerInput === 'paper' || playerInput === 'scissors'){
-    return playerInput;
-  } else {
-    console.log('Error! You must choose rock, paper or scissors!');
-  } */
-}
 
 
 
@@ -101,11 +106,8 @@ const playGame = () => {
   } else{ 
     console.log("There is no winner this time.")
   }
+  
 
-  const btn = document.querySelector('#rockbtn');
-    btn.addEventListener('click', () => {
-     playRound(playerSelection === 'rock');
-    })
 
 }
 
