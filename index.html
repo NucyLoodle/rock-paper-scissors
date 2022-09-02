@@ -62,10 +62,11 @@ const results = document.createElement('div');
 results.classList.add('results');
 
 
+
 rockButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'rock';
-  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection))
+  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
 
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
@@ -74,6 +75,7 @@ rockButton.addEventListener('click', () => {
 paperButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'paper';
+  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
 })
@@ -81,6 +83,7 @@ paperButton.addEventListener('click', () => {
 scissorsButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'scissors';
+  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
 })
