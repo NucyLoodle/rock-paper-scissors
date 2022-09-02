@@ -15,6 +15,11 @@
  
   <script>
 
+let playerScore = 0;
+let computerScore = 0;
+console.log(playerScore);
+console.log(computerScore);
+
 const rockButton = document.querySelector('.rock')
 const paperButton = document.querySelector('.paper')
 const scissorsButton = document.querySelector('.scissors')
@@ -33,6 +38,7 @@ function playRound(playerSelection,computerSelection) {
   }
     if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
+            computerScore ++;
             return "You lose! Paper beats Rock";
         } else {
             return "Congratulations, you won!";
@@ -57,11 +63,13 @@ function playRound(playerSelection,computerSelection) {
   }
 
 }
+
+
 const container = document.querySelector(".container");
 const results = document.createElement('div');
 results.classList.add('results');
-
-
+const scores = document.createElement('div');
+scores.classList.add('scores');
 
 rockButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
@@ -88,6 +96,16 @@ scissorsButton.addEventListener('click', () => {
   console.log(playRound(playerSelection, computerSelection));
 })
 container.appendChild(results)
+
+
+function score () {
+
+  scores.innerHTML = `player: ${playerScore} | computer: ${computerScore}`; 
+  container.appendChild(scores); 
+}
+
+score ();
+
 /*const getPlayerChoice = playerInput => {
   playerInput = prompt("Please enter your choice.")
   playerInput = playerInput.toLowerCase();
