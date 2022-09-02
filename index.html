@@ -17,6 +17,7 @@
 
 let playerScore = 0;
 let computerScore = 0;
+
 console.log(playerScore);
 console.log(computerScore);
 
@@ -43,9 +44,10 @@ function playRound(playerSelection,computerSelection) {
   }
     if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
-            computerScore ++;
+            computerScore ++;          
             return "You lose! Paper beats Rock";
         } else {
+            playerScore ++;
             return "Congratulations, you won!";
         }
   }
@@ -66,6 +68,7 @@ function playRound(playerSelection,computerSelection) {
   else if (playerSelection !== 'paper' || 'rock' || 'scissors'){
       return; 
   }
+  
 
 }
 
@@ -76,35 +79,46 @@ results.classList.add('results');
 const scores = document.createElement('div');
 scores.classList.add('scores');
 
-rockButton.addEventListener('click', () => {
+/*rockButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'rock';
   results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
 
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
-  score();
-})
+  ;
+})*/
 
-paperButton.addEventListener('click', () => {
+/*paperButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'paper';
   results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
   
-})
+})*/
 
-scissorsButton.addEventListener('click', () => {
+/*scissorsButton.addEventListener('click', () => {
   const computerSelection = getComputerChoice();
   const playerSelection = 'scissors';
   results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
   console.log("The computer has chosen: " + computerSelection);
   console.log(playRound(playerSelection, computerSelection));
+})*/
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      let playerSelection = button.className;
+      const computerSelection = getComputerChoice();
+      let roundResult =  playRound(playerSelection, computerSelection);
+      console.log(roundResult);
+      container.appendChild(results)
+      score();
+    })
 })
 
 
-container.appendChild(results)
 
 
 
