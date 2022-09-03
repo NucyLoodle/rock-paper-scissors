@@ -112,9 +112,11 @@ buttons.forEach((button) => {
       let playerSelection = button.className;
       const computerSelection = getComputerChoice();
       let roundResult =  playRound(playerSelection, computerSelection);
+      results.textContent = `The computer has chosen:${getComputerChoice()}. ${roundResult}`;
+      score();
       console.log(roundResult);
       container.appendChild(results)
-      score();
+      
     })
 })
 
