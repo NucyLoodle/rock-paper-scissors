@@ -69,9 +69,9 @@ function playRound(playerSelection,computerSelection) {
             return "Congratulations, you won!";
         }
   }
-  //else if (playerSelection !== 'paper' || 'rock' || 'scissors'){
-      //return; 
-  //}
+  else if (playerSelection !== 'paper' || 'rock' || 'scissors'){
+      return; 
+  }
   
 
 }
@@ -115,8 +115,11 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
       let playerSelection = button.className;
       const computerSelection = getComputerChoice();
-      let roundResult =  playRound(playerSelection, computerSelection);
-      results.textContent = `The computer has chosen: ${getComputerChoice()}. ${roundResult}`;
+      let roundResult =  playRound(playerSelection,computerSelection);
+      results.textContent = `The computer has chosen: ${computerSelection}. ${roundResult}`;
+      //console.log("The player choice is" + playerSelection)
+      //console.log("The computerChoice is" + getComputerChoice());
+      //console.log("The computerSelection is" + computerSelection);
       score();
       gameEnd();
       console.log(roundResult);
