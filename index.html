@@ -118,11 +118,26 @@ buttons.forEach((button) => {
       let roundResult =  playRound(playerSelection, computerSelection);
       results.textContent = `The computer has chosen: ${getComputerChoice()}. ${roundResult}`;
       score();
+      gameEnd();
       console.log(roundResult);
       container.appendChild(results)
       
     })
 })
+
+  function gameEnd() {
+    if(playerScore === 5 || computerScore === 5) {
+        document.querySelector('.rock').disabled = true;
+        document.querySelector('.paper').disabled = true;
+        document.querySelector('.scissors').disabled = true;
+        if (playerScore > computerScore) {
+            results.textContent = `Congratulations! You are the winner!`;
+        } else if (computerScore > playerScore) {
+          results.textContent = `The computer wins :(`;
+        }
+    }
+}
+
 
 
 
