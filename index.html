@@ -53,15 +53,19 @@ function playRound(playerSelection,computerSelection) {
   }
     if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
+          computerScore ++;
             return "You lose! Scissors beats Paper";
         } else {
+            playerScore ++;
             return "Congratulations, you won!";
         }
   }
   if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
+            computerScore ++;
             return "You lose! Rock beats Scissors";
         } else {
+            playerScore ++;
             return "Congratulations, you won!";
         }
   }
