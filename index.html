@@ -40,12 +40,12 @@ function score () {
 
 function playRound(playerSelection,computerSelection) {
   if (playerSelection === computerSelection) {
-    return 'This game is a tie!';
+    return 'You are reading each others minds! This game is a tie!';
   }
     if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
             computerScore ++;          
-            return "You lose! Paper beats Rock";
+            return "You lose! Paper beats Rock.";
         } else {
             playerScore ++;
             return "Congratulations, you won!";
@@ -54,7 +54,7 @@ function playRound(playerSelection,computerSelection) {
     if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
           computerScore ++;
-            return "You lose! Scissors beats Paper";
+            return "You lose! Scissors beats Paper.";
         } else {
             playerScore ++;
             return "Congratulations, you won!";
@@ -63,7 +63,7 @@ function playRound(playerSelection,computerSelection) {
   if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
             computerScore ++;
-            return "You lose! Rock beats Scissors";
+            return "You lose! Rock beats Scissors.";
         } else {
             playerScore ++;
             return "Congratulations, you won!";
@@ -116,7 +116,7 @@ buttons.forEach((button) => {
       let playerSelection = button.className;
       const computerSelection = getComputerChoice();
       let roundResult =  playRound(playerSelection, computerSelection);
-      results.textContent = `The computer has chosen:${getComputerChoice()}. ${roundResult}`;
+      results.textContent = `The computer has chosen: ${getComputerChoice()}. ${roundResult}`;
       score();
       console.log(roundResult);
       container.appendChild(results)
