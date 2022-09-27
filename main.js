@@ -56,6 +56,12 @@ function playRound(playerSelection,computerSelection) {
 
 }
 
+function gameStart() {
+    getComputerChoice();
+    playRound(playerSelection,computerSelection);
+}
+
+
 
 const container = document.querySelector(".container");
 const results = document.createElement('div');
@@ -72,6 +78,12 @@ buttons.forEach((button) => {
       const computerSelection = getComputerChoice();
       let roundResult =  playRound(playerSelection,computerSelection);
       results.textContent = `The computer has chosen: ${computerSelection}. ${roundResult}`;
+      function gameStart() {
+        getComputerChoice();
+        score ();
+        playRound(playerSelection,computerSelection);
+    }
+      
       score();
       gameEnd();
       console.log(roundResult);
@@ -80,6 +92,7 @@ buttons.forEach((button) => {
     })
 })
 
+
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
@@ -87,6 +100,7 @@ function resetGame() {
     let resetText = document.createTextNode("Try again!");
     reset.appendChild(resetText);
     container.appendChild(reset);
+    gameStart();
     
 
 }
