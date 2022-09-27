@@ -106,9 +106,12 @@ function resetGame() {
             document.querySelector('.rock').disabled = false;
             document.querySelector('.paper').disabled = false;
             document.querySelector('.scissors').disabled = false;
+            resetButton.remove()
 
         })
     })
+    
+        
     
     
 
