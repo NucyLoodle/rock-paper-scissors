@@ -103,10 +103,12 @@ function resetGame() {
         resetButton.addEventListener('click', () => {
             playerScore = 0;
             computerScore = 0;
+            score();
             document.querySelector('.rock').disabled = false;
             document.querySelector('.paper').disabled = false;
             document.querySelector('.scissors').disabled = false;
-            resetButton.remove()
+            results.remove();
+            resetButton.remove();
 
         })
     })
