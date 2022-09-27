@@ -80,6 +80,17 @@ buttons.forEach((button) => {
     })
 })
 
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    let reset = document.createElement("BUTTON");
+    let resetText = document.createTextNode("Try again!");
+    reset.appendChild(resetText);
+    container.appendChild(reset);
+    
+
+}
+
   function gameEnd() {
     if(playerScore === 5 || computerScore === 5) {
         document.querySelector('.rock').disabled = true;
@@ -90,10 +101,8 @@ buttons.forEach((button) => {
         } else if (computerScore > playerScore) {
           results.textContent = `The computer wins :(`;
         }
-        let reset = document.createElement("BUTTON");
-        let resetText = document.createTextNode("Try again!");
-        reset.appendChild(resetText);
-        container.appendChild(reset);
-    }
+        resetGame();
+    } 
 
 }
+
