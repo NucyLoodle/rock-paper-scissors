@@ -66,32 +66,7 @@ results.classList.add('results');
 const scores = document.createElement('div');
 scores.classList.add('scores');
 
-/*rockButton.addEventListener('click', () => {
-  const computerSelection = getComputerChoice();
-  const playerSelection = 'rock';
-  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
 
-  console.log("The computer has chosen: " + computerSelection);
-  console.log(playRound(playerSelection, computerSelection));
-  ;
-})*/
-
-/*paperButton.addEventListener('click', () => {
-  const computerSelection = getComputerChoice();
-  const playerSelection = 'paper';
-  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
-  console.log("The computer has chosen: " + computerSelection);
-  console.log(playRound(playerSelection, computerSelection));
-  
-})*/
-
-/*scissorsButton.addEventListener('click', () => {
-  const computerSelection = getComputerChoice();
-  const playerSelection = 'scissors';
-  results.textContent = ("The computer has chosen: " + computerSelection + ". " + playRound(playerSelection, computerSelection));
-  console.log("The computer has chosen: " + computerSelection);
-  console.log(playRound(playerSelection, computerSelection));
-})*/
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -100,9 +75,6 @@ buttons.forEach((button) => {
       const computerSelection = getComputerChoice();
       let roundResult =  playRound(playerSelection,computerSelection);
       results.textContent = `The computer has chosen: ${computerSelection}. ${roundResult}`;
-      //console.log("The player choice is" + playerSelection)
-      //console.log("The computerChoice is" + getComputerChoice());
-      //console.log("The computerSelection is" + computerSelection);
       score();
       gameEnd();
       console.log(roundResult);
