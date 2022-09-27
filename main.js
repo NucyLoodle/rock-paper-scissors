@@ -87,10 +87,10 @@ buttons.forEach((button) => {
     })
 })
 
-function gameStart() {
+/*function gameStart() {
     getComputerChoice();
     playRound();
-}
+}*/
 
 function resetGame() {
     let reset = document.createElement("BUTTON");
@@ -103,7 +103,9 @@ function resetGame() {
         resetButton.addEventListener('click', () => {
             playerScore = 0;
             computerScore = 0;
-            document.querySelector('.rock').disabled = false
+            document.querySelector('.rock').disabled = false;
+            document.querySelector('.paper').disabled = false;
+            document.querySelector('.scissors').disabled = false;
 
         })
     })
