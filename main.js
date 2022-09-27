@@ -1,9 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-console.log(playerScore);
-console.log(computerScore);
-
 const rockButton = document.querySelector('.rock')
 const paperButton = document.querySelector('.paper')
 const scissorsButton = document.querySelector('.scissors')
