@@ -56,11 +56,6 @@ function playRound(playerSelection,computerSelection) {
 
 }
 
-function gameStart() {
-    getComputerChoice();
-    playRound(playerSelection,computerSelection);
-}
-
 
 
 const container = document.querySelector(".container");
@@ -78,11 +73,11 @@ buttons.forEach((button) => {
       const computerSelection = getComputerChoice();
       let roundResult =  playRound(playerSelection,computerSelection);
       results.textContent = `The computer has chosen: ${computerSelection}. ${roundResult}`;
-      function gameStart() {
-        getComputerChoice();
-        score ();
-        playRound(playerSelection,computerSelection);
-    }
+      //function gameStart() {
+        //getComputerChoice();
+       // score ();
+        //playRound(playerSelection,computerSelection);
+    //}
       
       score();
       gameEnd();
@@ -92,15 +87,27 @@ buttons.forEach((button) => {
     })
 })
 
+function gameStart() {
+    getComputerChoice();
+    playRound();
+}
 
 function resetGame() {
-    playerScore = 0;
-    computerScore = 0;
     let reset = document.createElement("BUTTON");
     let resetText = document.createTextNode("Try again!");
     reset.appendChild(resetText);
     container.appendChild(reset);
-    gameStart();
+    reset.setAttribute('id','reset');
+    const resetButton = document.querySelectorAll('#reset');
+    resetButton.forEach((resetButton) => {
+        resetButton.addEventListener('click', () => {
+            playerScore = 0;
+            computerScore = 0;
+            document.querySelector('.rock').disabled = false
+
+        })
+    })
+    
     
 
 }
@@ -116,7 +123,7 @@ function resetGame() {
           results.textContent = `The computer wins :(`;
         }
         resetGame();
-    } 
+        } 
 
 }
 
