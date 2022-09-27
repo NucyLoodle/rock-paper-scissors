@@ -90,5 +90,10 @@ buttons.forEach((button) => {
         } else if (computerScore > playerScore) {
           results.textContent = `The computer wins :(`;
         }
+        let reset = document.createElement("BUTTON");
+        let resetText = document.createTextNode("Try again!");
+        reset.appendChild(resetText);
+        container.appendChild(reset);
     }
+
 }
