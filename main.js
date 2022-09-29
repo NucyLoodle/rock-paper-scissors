@@ -73,12 +73,7 @@ buttons.forEach((button) => {
       const computerSelection = getComputerChoice();
       let roundResult =  playRound(playerSelection,computerSelection);
       results.textContent = `The computer has chosen: ${computerSelection}. ${roundResult}`;
-      //function gameStart() {
-        //getComputerChoice();
-       // score ();
-        //playRound(playerSelection,computerSelection);
-    //}
-      
+  
       score();
       gameEnd();
       console.log(roundResult);
@@ -87,10 +82,7 @@ buttons.forEach((button) => {
     })
 })
 
-/*function gameStart() {
-    getComputerChoice();
-    playRound();
-}*/
+
 
 function resetGame() {
     let reset = document.createElement("BUTTON");
